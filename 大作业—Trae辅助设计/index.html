@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="lo">
+        <img src="./image/logo.jpg" class="logo">中国国防   
+        </div>             
+        <a href="index.html">首页</a>
+        <a href="陆军力量.html">陆军力量</a>
+        <a href="海军力量.html">海军力量</a>
+        <a href="空军力量.html">空军力量</a>
+        <a href="火箭军力量.html">火箭军力量</a>
+        <a href="注册登录.html">注册登录</a>         
+        </div>
+    </div>
+    <div class="carousel-container">
+        <button class="carousel-btn prev-btn">&lt;</button>
+        <img src="./image/福建舰.jpg" alt="图1" class="carousel-img" id="current-img">
+        <button class="carousel-btn next-btn">&gt;</button>
+    </div>
+
+    <script>
+        const imgList = [
+            { url: "./image/99a主战坦克.jpg"},
+            { url: "./image/山东舰.jpg"},
+            { url: "./image/歼-16.jpg"},
+            { url: "./image/歼-20.jpg" }
+        ];
+
+        const currentImg = document.getElementById("current-img");
+        const imgDesc = document.getElementById("img-desc");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+
+        let currentIndex = 0;
+
+        function changeImg(index) {
+            currentImg.src = imgList[index].url;
+            imgDesc.textContent = imgList[index].desc;
+            currentIndex = index;
+        }
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+            changeImg(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % imgList.length;
+            changeImg(currentIndex);
+        });
+    </script>
+    <div class="main-l">
+        <div class="content-l">
+            <a href="http://www.mod.gov.cn/gfbw/jmsd/16421559.html">《反腐败斗争越彻底，攻坚百年越托底——持续深化政治整训、纵深推进正风反腐系列谈》</a>
+            <p>强军论坛丨反腐败斗争越彻底，攻坚百年越托底</p>
+        </div>
+        <div class="content-l">
+            <a href="http://www.mod.gov.cn/gfbw/jmsd/16421308.html">《讲好老一辈革命家的故事》</a>
+            <p>八一锐评丨讲好老一辈革命家的故事</p>
+        </div>
+        <div class="content-l">
+            <a href="http://www.mod.gov.cn/gfbw/jmsd/16421109.html">《严于高于地方，走在全党前列——持续深化政治整训、纵深推进正风反腐系列谈》</a>
+            <p>强军论坛丨严于高于地方，走在全党前列</p>
+        </div>
+        <div class="content-l">
+            <a href="http://www.mod.gov.cn/gfbw/jmsd/16419640.html">《如何以上率下躬身示范——明辨是非系列谈》</a>
+            <p>明辨是非系列谈丨如何以上率下躬身示范</p>
+        </div>
+        <div class="content-l">
+            <a href="http://www.mod.gov.cn/gfbw/jmsd/16417521.html">《共护抗战胜利重大成果 共同推进祖国统一大业》</a>
+            <p>解放军报评论员：共护抗战胜利重大成果 共同推进祖国统一大业</p>
+        </div>
+        <div class="content-l">
+            <a href="http://www.mod.gov.cn/gfbw/jmsd/16416776.html">《和平须以实力为后盾》</a>
+            <p>八一时评丨和平须以实力为后盾</p>
+        </div>
+        <div class="content-l">
+            <a href="http://www.mod.gov.cn/gfbw/jmsd/16417126.html">《谱写中国式现代化更加绚丽的篇章——热烈祝贺党的二十届四中全会胜利闭幕》</a>
+            <p>解放军报评论员：谱写中国式现代化更加绚丽的篇章</p>
+        </div>
+    </div>
+    <div class="main-r">
+        <div class="main-r-title">国防热点</div>
+        <div class="content-r">
+            <p><a href="http://www.mod.gov.cn/gfbw/qwfb/16421908.html">国防部：日方若胆敢铤而走险必将碰得头破血流</a></p>
+            <p><a href="http://www.mod.gov.cn/gfbw/qwfb/16421911.html">国防部：希望广大台湾同胞更加勇敢地向“台独”说“不”</a></p>
+            <p><a href="http://www.mod.gov.cn/gfbw/spbb_214126/16420458.html">福建舰入列！向深蓝！</a></p>
+            <p><a href="http://www.mod.gov.cn/gfbw/spbb_214126/16421874.html">海军四川舰开展首次航行试验</a></p>
+            <p><a href="http://www.mod.gov.cn/gfbw/xwfyr/16418907.html">国防部奉劝菲方早日迷途知返</a></p>
+            <p><a href="http://www.mod.gov.cn/gfbw/xwfyr/16418905.html">解放军将以更强大能力粉碎“台独”图谋和外来干涉</a></p>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="link">
+            <p>合作友商</p>
+            <div class="link-group">
+                <a href="#">百度</a>
+                <a href="#">百度</a>
+                <a href="#">百度</a>
+                <a href="#">百度</a>
+            </div>
+            <div class="link-group">
+                <a href="#">豆包</a>
+                <a href="#">豆包</a>
+                <a href="#">豆包</a>
+                <a href="#">豆包</a>
+            </div>
+            <div class="link-group">
+                <a href="#">抖音</a>
+                <a href="#">抖音</a>
+                <a href="#">抖音</a>
+                <a href="#">抖音</a>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">Copyright 北冥有条蔡徐鲲 版权所有</div>
+</div>
+</body>
+</html>
